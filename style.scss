@@ -1,0 +1,198 @@
+:root {
+    --yellow: #fff700;
+    --red: #FF0045;
+    --green: #00FF55;
+    --white:#ffffff ;
+    --dark-blue: #181B2E;
+    --quick:all 0.25s ease-out;
+    
+}
+
+*,*::after,*::before {
+
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    //border: 1px solid blue;
+
+
+
+}
+
+//helper class
+
+
+
+
+.heading{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.p1{
+    color: var(--yellow);
+}
+
+.p2{
+    color: var(--red) ;
+}
+
+button{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    background: var(--green);
+    padding: 10px 60px;
+    border-radius: 5px;
+    transition: var(--quick);
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+}
+
+
+.cross{
+    background-color: aqua;
+    &:hover{
+        background-color: aqua !important;
+    }
+}
+.dot{
+    background-color: rgb(247, 0, 255);
+    &:hover{
+        background-color: rgb(162, 0, 255) !important;
+    }
+}
+
+
+
+
+
+// main css 
+
+
+
+
+body{
+
+    height: 100vh;
+    width: 100vw;
+    background:var(--dark-blue);
+    overflow: hidden;
+    display: flex
+}
+
+.left{
+   
+    height: inherit;
+    width: 50%;
+    display: grid;
+    place-items: center;
+
+    .box-container {
+        height: 450px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+
+        .section{
+            height: 150px;
+            display: flex;
+
+            .box{
+                width: 150px;
+                height: 150px;
+                transition: var(--quick);
+
+                &:hover{
+                    background: rgba(255, 255, 255, 0.11);
+                    
+                }
+
+            }
+
+        }
+
+
+    }
+}
+
+/// borders
+
+
+
+
+.box{
+    border: 1px solid white;    
+}
+.top .box{
+    border-top: none;
+}
+.bottom .box{
+    border-bottom: none;
+}
+
+.section > :nth-child(1){
+    border-left:none ;
+}
+.section > :nth-child(3){
+    border-right:none ;
+}
+
+
+/// right
+
+
+
+.right{
+
+    height: inherit;
+    width: 50%;
+    display: flex;
+    color :var(--white);
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    justify-content: space-evenly;
+
+    .score{
+        height:200px;
+        width:60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h2{
+            border-bottom: 1px solid white;
+            
+        }
+
+        .players{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            height: 33%;
+
+            &.p1{
+                border-bottom: 1px solid white;
+            }
+            
+        }
+
+
+    }
+
+    .mssg{
+        height: 200px;
+        width: 60%;
+        display: grid;
+        place-items: center;
+        border: 1px double white;
+
+    }
+
+}

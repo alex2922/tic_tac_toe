@@ -1,0 +1,146 @@
+:root {
+  --yellow: #fff700;
+  --red: #FF0045;
+  --green: #00FF55;
+  --white:#ffffff ;
+  --dark-blue: #181B2E;
+  --quick:all 0.25s ease-out;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.heading {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.p1 {
+  color: var(--yellow);
+}
+
+.p2 {
+  color: var(--red);
+}
+
+button {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  background: var(--green);
+  padding: 10px 60px;
+  border-radius: 5px;
+  transition: var(--quick);
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.cross {
+  background-color: aqua;
+}
+.cross:hover {
+  background-color: aqua !important;
+}
+
+.dot {
+  background-color: rgb(247, 0, 255);
+}
+.dot:hover {
+  background-color: rgb(162, 0, 255) !important;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: var(--dark-blue);
+  overflow: hidden;
+  display: flex;
+}
+
+.left {
+  height: inherit;
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.left .box-container {
+  height: 450px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+.left .box-container .section {
+  height: 150px;
+  display: flex;
+}
+.left .box-container .section .box {
+  width: 150px;
+  height: 150px;
+  transition: var(--quick);
+}
+.left .box-container .section .box:hover {
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.box {
+  border: 1px solid white;
+}
+
+.top .box {
+  border-top: none;
+}
+
+.bottom .box {
+  border-bottom: none;
+}
+
+.section > :nth-child(1) {
+  border-left: none;
+}
+
+.section > :nth-child(3) {
+  border-right: none;
+}
+
+.right {
+  height: inherit;
+  width: 50%;
+  display: flex;
+  color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+  justify-content: space-evenly;
+}
+.right .score {
+  height: 200px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.right .score h2 {
+  border-bottom: 1px solid white;
+}
+.right .score .players {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 33%;
+}
+.right .score .players.p1 {
+  border-bottom: 1px solid white;
+}
+.right .mssg {
+  height: 200px;
+  width: 60%;
+  display: grid;
+  place-items: center;
+  border: 1px double white;
+}/*# sourceMappingURL=style.css.map */
