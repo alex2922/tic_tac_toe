@@ -51,7 +51,48 @@ button:hover {
   background-color: rgb(247, 0, 255);
 }
 .dot:hover {
-  background-color: rgb(162, 0, 255) !important;
+  background-color: rgb(247, 0, 255) !important;
+}
+
+.boxcross {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  display: none;
+}
+.boxcross span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: "";
+  height: 30px;
+  width: 150px;
+  background: var(--red);
+  border-radius: 8px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.boxcross span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.boxdot {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  display: none;
+}
+.boxdot span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: "";
+  height: 120px;
+  width: 120px;
+  border-radius: 100px;
+  border: 30px solid var(--yellow);
+  transform: translate(-50%, -50%);
 }
 
 body {
@@ -82,6 +123,8 @@ body {
   width: 150px;
   height: 150px;
   transition: var(--quick);
+  display: grid;
+  place-items: center;
 }
 .left .box-container .section .box:hover {
   background: rgba(255, 255, 255, 0.11);
